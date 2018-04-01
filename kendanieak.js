@@ -1,0 +1,47 @@
+class KendaniEak {
+    constructor(x, y, index) {
+        this.x = x;
+        this.y = y;
+        this.energy = 10;
+        this.index = index;
+        this.multiply = 0;
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+        //---------------------------------------------------  
+if(n == 1){
+    this.multiply = 2;
+}
+if(n == 2){
+    this.multiply = 4;
+}
+if(n == 3){
+    this.multiply = 3;
+}
+if(n == 4){
+    this.multiply = 2;
+}
+}
+//---------------------------------------------------  
+    yntrelVandak(ch) {
+        var found = [];
+        for (var i in this.directions) {
+            var x = this.directions[i][0];
+            var y = this.directions[i][1];
+            if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length) {
+                if (matrix[y][x] == ch) {
+                    found.push(this.directions[i]);
+                }
+            }
+            
+        }
+        return found;
+    }
+}
