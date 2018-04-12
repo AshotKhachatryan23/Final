@@ -67,6 +67,48 @@ class Bomb extends KendaniEak {
             this.y = norVandak[1];
         }
     }
+    sharjvel4() {
+        var datarkVandakner = this.yntrelVandak(4);
+        var norVandak = random(datarkVandakner);
+        this.energy --
+        if (norVandak) {
+            matrix[this.y][this.x] = 0;
+            matrix[this.y + 1][this.x] = 0;
+            matrix[this.y][this.x + 1] = 0;
+            matrix[this.y][this.x - 1] = 0;
+            matrix[norVandak[1]][norVandak[0]] = 13;
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+        }
+    }
+    sharjvel5() {
+        var datarkVandakner = this.yntrelVandak(5);
+        var norVandak = random(datarkVandakner);
+        this.energy --
+        if (norVandak) {
+            matrix[this.y][this.x] = 0;
+            matrix[this.y + 1][this.x] = 0;
+            matrix[this.y][this.x + 1] = 0;
+            matrix[this.y][this.x - 1] = 0;
+            matrix[norVandak[1]][norVandak[0]] = 13;
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+        }
+    }
+    sharjvel6() {
+        var datarkVandakner = this.yntrelVandak(6);
+        var norVandak = random(datarkVandakner);
+        this.energy --
+        if (norVandak) {
+            matrix[this.y][this.x] = 0;
+            matrix[this.y + 1][this.x] = 0;
+            matrix[this.y][this.x + 1] = 0;
+            matrix[this.y][this.x - 1] = 0;
+            matrix[norVandak[1]][norVandak[0]] = 13;
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+        }
+    }
     //---------------------------------------------------  
     mahanal() {
         if (this.energy <= 1) {
